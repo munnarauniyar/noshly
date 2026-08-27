@@ -1,0 +1,35 @@
+.restaurant-card {
+    background: #181b21;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+    transition: .3s;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-6px);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 30px 7%;
+}
+
+.restaurant-section {
+    padding: 70px 7%;
+    background: #0f1115;
+}
+
+.restaurant-section h2 {
+    margin-bottom: 28px;
+    color: white;
+    font-size: 32px;
+}
