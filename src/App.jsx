@@ -5,6 +5,10 @@ import Categories from "./components/Catagories/Categories";
 import RestaurantDetails from "./Pages/RestaurantDetails/RestaurantDetails";
 import BottomNav from "./components/BottomNav/BottomNav";
 
+import Search from "./Pages/Search/Search";
+import Favorites from "./Pages/Favorites/Favorites";
+import Profile from "./Pages/Profile/Profile";
+
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -37,7 +41,23 @@ function App() {
           element={<RestaurantDetails />}
         />
 
+        <Route
+          path="/search"
+          element={<Search />}
+        />
+
+        <Route
+          path="/favorites"
+          element={<Favorites />}
+        />
+
+        <Route
+          path="/profile"
+          element={<Profile />}
+        />
+
       </Routes>
+
 
     </div>
   );
