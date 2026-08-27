@@ -3,9 +3,11 @@ import Hero from "./components/Hero/Hero";
 import RestaurantSection from "./components/RestaurantSection/RestaurantSection";
 import Categories from "./components/Catagories/Categories";
 import RestaurantDetails from "./Pages/RestaurantDetails/RestaurantDetails";
+import BottomNav from "./components/BottomNav/BottomNav";
 
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+
 
 function App() {
 
@@ -25,6 +27,7 @@ function App() {
               <Hero setSearch={setSearch} />
               <RestaurantSection search={search} />
               <Categories />
+              <BottomNav />
             </>
           }
         />
