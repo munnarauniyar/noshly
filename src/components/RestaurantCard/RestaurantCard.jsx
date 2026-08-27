@@ -5,11 +5,12 @@ function RestaurantCard({ restaurant }) {
 
     return (
         <Link
-            to={`/restaurant/${restaurant.id}`}
+            to={`/ restaurant / ${restaurant.id} `}
             className="restaurant-card"
         >
 
             <div className="restaurant-image">
+
                 <img
                     src={restaurant.image}
                     alt={restaurant.name}
@@ -18,6 +19,14 @@ function RestaurantCard({ restaurant }) {
                 <span className="rating-badge">
                     ⭐ {restaurant.rating}
                 </span>
+
+                <button
+                    className="favorite-button"
+                    onClick={(e) => e.preventDefault()}
+                >
+                    ♡
+                </button>
+
             </div>
 
             <div className="restaurant-info">
@@ -29,10 +38,15 @@ function RestaurantCard({ restaurant }) {
                 </p>
 
                 <div className="restaurant-meta">
-                    <span>🕒 {restaurant.deliveryTime}</span>
+
+                    <span>
+                        🕒 {restaurant.deliveryTime}
+                    </span>
+
                     <span className="delivery-label">
                         Delivery
                     </span>
+
                 </div>
 
             </div>
