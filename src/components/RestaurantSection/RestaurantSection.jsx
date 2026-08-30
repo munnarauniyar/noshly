@@ -5,7 +5,7 @@ import "./RestaurantSection.css";
 
 
 
-function RestaurantSection({ search }) {
+function RestaurantSection({ search, toggleFavorites }) {
 
 
 
@@ -22,6 +22,7 @@ function RestaurantSection({ search }) {
                     <RestaurantCard
                         restaurant={restaurant}
                         key={restaurant.id}
+                        toggleFavorites={toggleFavorites}
                     />
                 ))}
             </div>

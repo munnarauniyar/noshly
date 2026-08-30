@@ -85,30 +85,22 @@
     font-weight: 600;
 }
 
-
 .favorite-button {
     position: absolute;
-
     top: 12px;
     left: 12px;
-
     width: 36px;
     height: 36px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: rgba(15, 17, 21, 0.8);
-
-    color: white;
-
     font-size: 20px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
+
+    border: none;
+    background: none;
+    color: white;
 
     transition:
         background 0.2s ease,
@@ -116,6 +108,7 @@
 }
 
 .favorite-button:hover {
-    background: #ff6b35;
+    background: none;
+    color: white;
     transform: scale(1.08);
 }

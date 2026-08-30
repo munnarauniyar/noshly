@@ -16,6 +16,11 @@ import { Routes, Route } from "react-router-dom";
 function App() {
 
   const [search, setSearch] = useState("");
+  const [favoriteIds, setFavoriteIds] = useState([]);
+
+  const toggleFavorites = (id) => {
+    console.log("Favorite button clicked", id);
+  };
 
   return (
     <div>
@@ -29,9 +34,11 @@ function App() {
           element={
             <>
               <Hero setSearch={setSearch} />
-              <RestaurantSection search={search} />
+              <RestaurantSection
+                search={search}
+                toggleFavorites={toggleFavorites}
+              />
               <Categories />
-              <BottomNav />
             </>
           }
         />
@@ -57,6 +64,8 @@ function App() {
         />
 
       </Routes>
+
+      <BottomNav />
 
 
     </div>

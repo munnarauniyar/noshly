@@ -23,13 +23,71 @@
     padding: 30px 7%;
 }
 
+
+.restaurant-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.restaurant-grid .restaurant-card {
+    flex: 0 0 330px;
+}
+
+@media (max-width: 768px) {
+
+    .restaurant-grid {
+        gap: 15px;
+    }
+
+    .restaurant-grid .restaurant-card {
+        flex: 0 0 280px;
+    }
+}
+
 .restaurant-section {
-    padding: 70px 7%;
+    padding: 50px 7%;
     background: #0f1115;
+    color: white;
 }
 
 .restaurant-section h2 {
-    margin-bottom: 28px;
-    color: white;
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+
+    .restaurant-section {
+        padding: 30px 5%;
+        overflow: hidden;
+    }
+
+    .restaurant-section h2 {
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+
+    .restaurant-grid {
+        display: flex;
+        gap: 14px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        padding-bottom: 10px;
+
+        scrollbar-width: none;
+    }
+
+    .restaurant-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .restaurant-card {
+        flex: 0 0 180px;
+        width: 180px;
+    }
+
+    .restaurant-image {
+        height: 180px;
+    }
 }

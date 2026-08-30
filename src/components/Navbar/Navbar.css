@@ -109,3 +109,9 @@
     background: #ff7b4b;
     transform: translateY(-1px);
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+}
