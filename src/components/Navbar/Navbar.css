@@ -19,7 +19,7 @@
 
 .navbar-logo {
     display: flex;
-    align-items: center;
+    align-items: left;
 }
 
 .navbar-logo img {
@@ -111,7 +111,7 @@
 }
 
 @media (max-width: 768px) {
-    .navbar {
+    .navbar-links {
         display: none;
     }
 }

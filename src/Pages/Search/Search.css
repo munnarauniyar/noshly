@@ -1,0 +1,188 @@
+.search-page {
+    min-height: 100vh;
+    padding: 60px 8% 120px;
+    background: #0f1115;
+    color: white;
+}
+
+
+/* Header */
+
+.search-header {
+    margin-bottom: 30px;
+}
+
+.search-header h1 {
+    margin: 0 0 8px;
+    font-size: 38px;
+}
+
+.search-header p {
+    margin: 0;
+    color: #9da3ae;
+    font-size: 15px;
+}
+
+
+/* Search box */
+
+.search-input-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    max-width: 700px;
+
+    background: #181b21;
+    border: 1px solid #292e37;
+
+    border-radius: 14px;
+
+    padding: 5px 14px;
+
+    margin-bottom: 45px;
+
+    transition: border-color 0.2s ease;
+}
+
+.search-input-wrapper:focus-within {
+    border-color: #ff6b35;
+}
+
+.search-icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.search-input-wrapper input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: white;
+
+    padding: 13px 5px;
+
+    font-size: 15px;
+}
+
+.search-input-wrapper input::placeholder {
+    color: #777d87;
+}
+
+
+/* Clear button */
+
+.clear-search {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #292e37;
+    color: white;
+
+    font-size: 20px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* Results */
+
+.search-results h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+
+/* No results */
+
+.no-results {
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    border: 1px solid #242831;
+    border-radius: 18px;
+
+    background: #181b21;
+}
+
+.no-results-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.no-results h3 {
+    margin: 0 0 7px;
+    font-size: 20px;
+}
+
+.no-results p {
+    margin: 0;
+    color: #858b96;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .search-page {
+        padding: 35px 5% 110px;
+    }
+
+    .search-header h1 {
+        font-size: 29px;
+    }
+
+    .search-header p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .search-input-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .search-results h2 {
+        font-size: 21px;
+    }
+
+    /*
+       Make restaurant cards
+       horizontally scrollable
+       on mobile.
+    */
+
+    .search-page .restaurant-grid {
+        display: flex;
+        gap: 14px;
+
+        overflow-x: auto;
+        padding-bottom: 10px;
+
+        scrollbar-width: none;
+    }
+
+    .search-page .restaurant-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .search-page .restaurant-card {
+        flex: 0 0 180px;
+    }
+
+}
