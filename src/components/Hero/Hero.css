@@ -1,168 +1,41 @@
-.hero {
-    min-height: 520px;
-    padding: 60px 8%;
+import appframe from "../../assets/Restaurant/appframe.png";
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+function Hero({
+    setSearch
 
-    background: #0f1115;
-    color: white;
+}) {
+    return (<div className="min-h-[520px] py-[60px] px-[8%] flex items-center justify-between gap-[60px] bg-[#0f1115] text-white max-[768px]:min-h-[auto] max-[768px]:pt-[40px] max-[768px]:px-[5%] max-[768px]:pb-[30px] max-[768px]:flex-col max-[768px]:items-stretch max-[768px]:gap-[35px]" > {
+            /* HERO CONTENT */
+        }
+
+        <div className="flex-1 max-w-[620px] max-[768px]:max-w-full" > <span className="inline-block py-[8px] px-[14px] rounded-[30px] bg-[#ff6b35] text-[14px] font-semibold mb-[20px] max-[768px]:text-[12px] max-[768px]:py-[7px] max-[768px]:px-[12px] max-[768px]:mb-[15px]" > Delicious food, delivered </span> <h1 className="text-[4rem] leading-[1.05] mb-[20px] font-bold max-[768px]:text-[2.8rem] max-[768px]:mb-[16px]" > What are you <br /> Craving today? </h1> <p className="text-[1.1rem] leading-[1.7] text-[#b8bcc5] mb-[30px] max-[768px]:text-[0.95rem] max-[768px]:leading-[1.6] max-[768px]:mb-[22px]" > Discover your favorite restaurants, meals,
+        and flavors all in one place. </p> {
+            /* SEARCH */
+        }
+
+        <div className="flex w-full max-w-[600px] bg-white rounded-[14px] p-[6px] max-[768px]:max-w-full" > <input type="text"
+
+        onChange= {
+            (e)=> setSearch(e.target.value)
+        }
+
+        className="flex-1 border-0 outline-none py-[14px] px-[16px] text-[16px] text-[#0f1115] bg-transparent min-w-0 max-[768px]:p-[12px] max-[768px]:text-[14px]"
+
+        /> <button className="border-0 px-[24px] rounded-[10px] bg-[#ff6b35] text-white font-semibold cursor-pointer transition-colors duration-200 hover:bg-[#ff7b4b] max-[768px]:px-[18px]" > Search </button> </div> {
+            /* CTA */
+        }
+
+        <button className="mt-[18px] py-[14px] px-[22px] rounded-[10px] bg-transparent text-white border border-[#333842] cursor-pointer transition-colors duration-200 hover:border-[#ff6b35] max-[768px]:mt-[14px] max-[768px]:py-[12px] max-[768px]:px-[18px]" > Explore Restaurants → </button> </div> {
+            /* HERO IMAGE */
+        }
+
+        <div className="flex-1 flex justify-center max-[768px]:hidden" > <img src= {
+            appframe
+        }
+
+        alt="Noshly app preview"
+        className="w-full max-w-[520px] h-[420px] object-cover rounded-[30px]"
+        /> </div> </div>);
 }
 
-.hero-content {
-    flex: 1;
-    max-width: 620px;
-}
-
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image img {
-    width: 100%;
-    max-width: 520px;
-    height: 420px;
-    object-fit: cover;
-    border-radius: 30px;
-}
-
-.hero-badge {
-    display: inline-block;
-    padding: 8px 14px;
-    border-radius: 30px;
-    background: #ff6b35;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    line-height: 1.05;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #b8bcc5;
-    margin-bottom: 30px;
-}
-
-.search-box {
-    display: flex;
-    width: 100%;
-    max-width: 600px;
-
-    background: white;
-    border-radius: 14px;
-    padding: 6px;
-}
-
-.search-box input {
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 14px 16px;
-    font-size: 16px;
-    background: transparent;
-}
-
-.search-box button {
-    border: none;
-    padding: 0 24px;
-    border-radius: 10px;
-    background: #ff6b35;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.hero-cta {
-    margin-top: 18px;
-    padding: 14px 22px;
-    border: none;
-    border-radius: 10px;
-    background: transparent;
-    color: white;
-    border: 1px solid #333842;
-    cursor: pointer;
-}
-
-
-/* =========================
-   Mobile Responsive
-========================= */
-
-@media (max-width: 768px) {
-
-    .hero {
-        min-height: auto;
-        padding: 40px 5% 30px;
-
-        flex-direction: column;
-        align-items: stretch;
-
-        gap: 35px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero-badge {
-        font-size: 12px;
-        padding: 7px 12px;
-        margin-bottom: 15px;
-    }
-
-    .hero h1 {
-        font-size: 2.8rem;
-        line-height: 1.05;
-        margin-bottom: 16px;
-    }
-
-    .hero p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 22px;
-    }
-
-    .search-box {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .search-box input {
-        min-width: 0;
-        padding: 12px;
-        font-size: 14px;
-    }
-
-    .search-box button {
-        padding: 0 18px;
-    }
-
-    .hero-cta {
-        margin-top: 14px;
-        padding: 12px 18px;
-    }
-
-    .hero-image {
-        width: 100%;
-        display: none;
-    }
-
-    .hero-image img {
-        width: 100%;
-        max-width: 350px;
-        height: auto;
-        max-height: 350px;
-        object-fit: contain;
-        border-radius: 20px;
-    }
-}
+export default Hero;

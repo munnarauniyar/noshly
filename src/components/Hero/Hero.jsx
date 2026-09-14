@@ -7,6 +7,7 @@ function Hero({ setSearch }) {
     return (
 
         <div className="hero">
+            
             <div className="hero-content">
 
                 <span className="hero-badge">
